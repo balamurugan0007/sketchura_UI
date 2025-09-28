@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura/constants/ColorConst.dart';
-import 'package:sketchura/core/utils/custom_button.dart';
+import 'package:sketchura_ui/constants/ColorConst.dart';
+import 'package:sketchura_ui/core/utils/custom_button.dart';
 
 void main() {
   runApp(const MyApp());

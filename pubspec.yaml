@@ -1,12 +1,12 @@
-name: sketchura
+name: sketchura_ui
 
 description: "Sketchura UI is a Flutter UI builder package that helps you reduce boilerplate 
   code and build modern interfaces faster. It provides simple, reusable, and 
   customizable components to speed up your development workflow" 
 version: 0.0.1
-# homepage: https://github.com/yourusername/sketchura
+homepage: https://github.com/yourusername/sketchura
 repository: https://github.com/balamurugan0007/sketchura_UI
-publish_to: https://pub.dev
+# publish_to: 'none'
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
