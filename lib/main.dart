@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sketchura/constants/ColorConst.dart';
-import 'package:sketchura/core/utils/CustomButton.dart';
+import 'package:sketchura/core/utils/custom_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -66,11 +66,6 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {},
               isPrefixIcon: false,
               icon: Icon(Icons.usb),
-            ),
-            ElevatedButton.icon(
-              onPressed: () {},
-              label: Text('label'),
-              icon: Icon(Icons.abc_outlined),
             ),
           ],
         ),
