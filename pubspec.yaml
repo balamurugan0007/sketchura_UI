@@ -1,8 +1,12 @@
 name: sketchura
-description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+description: "Sketchura UI is a Flutter UI builder package that helps you reduce boilerplate 
+  code and build modern interfaces faster. It provides simple, reusable, and 
+  customizable components to speed up your development workflow" 
+version: 0.0.1
+# homepage: https://github.com/yourusername/sketchura
+repository: https://github.com/balamurugan0007/sketchura_UI
+publish_to: https://pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -16,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+
 
 environment:
   sdk: ^3.8.1
