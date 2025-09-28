@@ -33,7 +33,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
-  bool isactive = false;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -47,15 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             SkFilledButton(
               label: "Click",
-              onTap: () {
-                setState(() {
-                  if (!isactive) {
-                    isactive = true;
-                  } else {
-                    isactive = false;
-                  }
-                });
-              },
+              onTap: () {},
               backgroundColor: SkColors.error,
               borderRadius: 40,
             ),
@@ -63,9 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             SkOutlinedButton(
               label: "submit",
               onTap: () {},
-              borderColor: isactive
-                  ? SkColors.NeturalDarkDarkest
-                  : SkColors.success,
+              borderColor: SkColors.success,
             ),
             SizedBox(height: 20),
             SkTextButton(label: "view all ", onTap: () {}),
