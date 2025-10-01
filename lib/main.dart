@@ -1,15 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
-import 'package:sketchura_ui/constants/responsive.dart';
-import 'package:sketchura_ui/core/utils/accordion.dart';
-import 'package:sketchura_ui/core/utils/badges.dart';
-import 'package:sketchura_ui/core/utils/breadcrums.dart';
-import 'package:sketchura_ui/core/utils/custom_button.dart';
-import 'package:sketchura_ui/core/utils/custom_drop_down_option.dart';
-import 'package:sketchura_ui/core/utils/inputbar.dart';
-import 'package:sketchura_ui/core/utils/searchbar/animated_searchbar.dart';
-import 'package:sketchura_ui/core/utils/snackbar.dart';
-import 'package:sketchura_ui/core/utils/toast_message.dart';
 
 void main() {
   runApp(const MyApp());

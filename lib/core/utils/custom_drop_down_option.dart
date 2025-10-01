@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
-import 'package:flutter/material.dart';
 
 class SkDropDownMenu extends StatefulWidget {
   final ValueChanged<String> onChanged;

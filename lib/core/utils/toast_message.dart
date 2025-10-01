@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
-
-import 'package:flutter/material.dart';
 
 class SkToast {
   static const String successToast = 'success';
