@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/ColorConst.dart';
+import 'package:sketchura_ui/constants/color_const.dart';
 
 class SkFilledButton extends StatelessWidget {
   final String label;
@@ -9,7 +9,7 @@ class SkFilledButton extends StatelessWidget {
   final double? h;
   final double? borderRadius;
   final TextStyle? textStyle;
-  final EdgeInsetsGeometry? padding;
+
   final double? elevation;
   final BorderSide? border;
   final ShapeBorder? shape;
@@ -30,7 +30,7 @@ class SkFilledButton extends StatelessWidget {
     this.h,
     this.borderRadius,
     this.textStyle,
-    this.padding,
+
     this.elevation,
     this.border,
     this.shape,
@@ -55,7 +55,7 @@ class SkFilledButton extends StatelessWidget {
     return Material(
       elevation: elevation ?? 0,
       color: _isEnabled
-          ? (backgroundColor ?? Theme.of(context).colorScheme.primary)
+          ? (backgroundColor ?? SkColors.primary)
           : Theme.of(context).disabledColor,
       shape: effectiveShape,
       child: InkWell(
@@ -72,19 +72,18 @@ class SkFilledButton extends StatelessWidget {
         child: Container(
           height: h ?? 40,
           width: w ?? 120,
-          padding:
-              padding ??
-              const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           alignment: Alignment.center,
-          child: Text(
-            label,
-            style:
-                textStyle ??
-                Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: _isEnabled
-                      ? (textColor ?? SkColors.NeturalLighLightest)
-                      : SkColors.NeturalDarkLightest,
-                ),
+          child: Center(
+            child: Text(
+              label,
+              style:
+                  textStyle ??
+                  Theme.of(context).textTheme.labelLarge?.copyWith(
+                    color: _isEnabled
+                        ? (textColor ?? SkColors.lightLightest)
+                        : SkColors.darklight,
+                  ),
+            ),
           ),
         ),
       ),
@@ -100,7 +99,7 @@ class SkOutlinedButton extends StatelessWidget {
   final double? h;
   final double? borderRadius;
   final TextStyle? textStyle;
-  final EdgeInsetsGeometry? padding;
+
   final double? borderWidth;
   final ShapeBorder? shape;
 
@@ -120,7 +119,7 @@ class SkOutlinedButton extends StatelessWidget {
     this.h,
     this.borderRadius,
     this.textStyle,
-    this.padding,
+
     this.borderWidth,
     this.shape,
     required this.onTap,
@@ -161,19 +160,18 @@ class SkOutlinedButton extends StatelessWidget {
         child: Container(
           height: h ?? 40,
           width: w ?? 120,
-          padding:
-              padding ??
-              const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           alignment: Alignment.center,
-          child: Text(
-            label,
-            style:
-                textStyle ??
-                Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: _isEnabled
-                      ? (textColor ?? Theme.of(context).colorScheme.primary)
-                      : Colors.black38,
-                ),
+          child: Center(
+            child: Text(
+              label,
+              style:
+                  textStyle ??
+                  Theme.of(context).textTheme.labelLarge?.copyWith(
+                    color: _isEnabled
+                        ? (textColor ?? Theme.of(context).colorScheme.primary)
+                        : Colors.black38,
+                  ),
+            ),
           ),
         ),
       ),
@@ -188,7 +186,7 @@ class SkTextButton extends StatelessWidget {
   final VoidCallback? onLongPress;
   final TextStyle? textStyle;
   final bool isUnderlined;
-  final EdgeInsetsGeometry? padding;
+
   final FocusNode? focusNode;
   final bool autofocus;
   final MouseCursor? mouseCursor;
@@ -202,7 +200,7 @@ class SkTextButton extends StatelessWidget {
     this.onLongPress,
     this.textStyle,
     this.isUnderlined = false,
-    this.padding,
+
     this.focusNode,
     this.autofocus = false,
     this.mouseCursor,
@@ -226,9 +224,7 @@ class SkTextButton extends StatelessWidget {
                 ? SystemMouseCursors.click
                 : SystemMouseCursors.forbidden),
         borderRadius: BorderRadius.circular(4),
-        child: Padding(
-          padding:
-              padding ?? const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+        child: Center(
           child: Text(
             label,
             textAlign: textAlign,
@@ -263,7 +259,7 @@ class SkIconButton extends StatelessWidget {
   final Icon icon;
   final bool isPrefixIcon;
   final TextStyle? textStyle;
-  final EdgeInsetsGeometry? padding;
+
   final double spacing;
   final double borderWidth;
 
@@ -282,7 +278,7 @@ class SkIconButton extends StatelessWidget {
     required this.icon,
     this.isPrefixIcon = true,
     this.textStyle,
-    this.padding,
+
     this.spacing = 8,
     this.borderWidth = 1.5,
   });
@@ -307,31 +303,32 @@ class SkIconButton extends StatelessWidget {
         child: Container(
           height: h,
           width: w,
-          padding:
-              padding ??
-              const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              if (isPrefixIcon) icon,
-              if (isPrefixIcon) SizedBox(width: spacing),
-              Flexible(
-                child: Text(
-                  label,
-                  overflow: TextOverflow.ellipsis,
-                  style:
-                      textStyle ??
-                      Theme.of(context).textTheme.labelLarge?.copyWith(
-                        color: _isEnabled
-                            ? (textColor ?? Colors.white)
-                            : Colors.black38,
-                      ),
-                ),
+          child: Center(
+            child: SizedBox(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (isPrefixIcon) icon,
+                  if (isPrefixIcon) SizedBox(width: spacing),
+                  Flexible(
+                    child: Text(
+                      label,
+                      overflow: TextOverflow.ellipsis,
+                      style:
+                          textStyle ??
+                          Theme.of(context).textTheme.labelLarge?.copyWith(
+                            color: _isEnabled
+                                ? (textColor ?? Colors.white)
+                                : Colors.black38,
+                          ),
+                    ),
+                  ),
+                  if (!isPrefixIcon) SizedBox(width: spacing),
+                  if (!isPrefixIcon) icon,
+                ],
               ),
-              if (!isPrefixIcon) SizedBox(width: spacing),
-              if (!isPrefixIcon) icon,
-            ],
+            ),
           ),
         ),
       ),

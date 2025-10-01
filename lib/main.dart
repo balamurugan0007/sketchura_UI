@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/ColorConst.dart';
+import 'package:sketchura_ui/constants/color_const.dart';
+import 'package:sketchura_ui/constants/responsive.dart';
+import 'package:sketchura_ui/core/utils/accordion.dart';
+import 'package:sketchura_ui/core/utils/badges.dart';
+import 'package:sketchura_ui/core/utils/breadcrums.dart';
 import 'package:sketchura_ui/core/utils/custom_button.dart';
+import 'package:sketchura_ui/core/utils/custom_drop_down_option.dart';
+import 'package:sketchura_ui/core/utils/inputbar.dart';
+import 'package:sketchura_ui/core/utils/searchbar/animated_searchbar.dart';
+import 'package:sketchura_ui/core/utils/snackbar.dart';
+import 'package:sketchura_ui/core/utils/toast_message.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +41,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  TextEditingController usercontroller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,31 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SkFilledButton(
-              label: "Click",
-              onTap: () {},
-              backgroundColor: SkColors.error,
-              borderRadius: 40,
-            ),
-            SizedBox(height: 20),
-            SkOutlinedButton(
-              label: "submit",
-              onTap: () {},
-              borderColor: SkColors.success,
-            ),
-            SizedBox(height: 20),
-            SkTextButton(label: "view all ", onTap: () {}),
-            SizedBox(height: 20),
-            SkIconButton(
-              label: "user",
-              h: 40,
-              w: 120,
-              onTap: () {},
-              isPrefixIcon: false,
-              icon: Icon(Icons.usb),
-            ),
-          ],
+          children: <Widget>[],
         ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
