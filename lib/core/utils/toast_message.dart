@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sketchura_ui/constants/color_const.dart';
 
 class SkToast {
   static const String successToast = 'success';
@@ -67,7 +68,7 @@ class SkToast {
                   borderRadius: BorderRadius.circular(borderRadius),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.15),
+                      color: Colors.black38,
                       blurRadius: elevation,
                       offset: const Offset(0, 4),
                     ),
@@ -80,7 +81,7 @@ class SkToast {
                     Container(
                       padding: const EdgeInsets.all(6),
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.7),
+                        color: SkColors.lightMedium,
                         shape: BoxShape.circle,
                       ),
                       child: Icon(

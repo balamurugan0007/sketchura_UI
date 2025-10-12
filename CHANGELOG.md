@@ -8,8 +8,6 @@ Added
 
     - Progress Slider component to display and control progress.
 
-    - Sidebar component for easy navigation.
-
     - Custom Tabs component for tabbed navigation.
 
     - Global Table component to display tabular data.
@@ -17,6 +15,8 @@ Added
     - Checkbox component for selectable options.
 
     - Utility improvements for Alert Dialog UI to enhance user experience.
+
+    - Dropdown List has Added
  
  
 

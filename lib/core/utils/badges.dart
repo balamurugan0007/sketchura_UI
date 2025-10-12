@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sketchura_ui/constants/color_const.dart';
 
-class GlobalBadge extends StatelessWidget {
+class SkGlobalBadge extends StatelessWidget {
   final Widget child;
   final String value;
   final Color? badgeColor;
@@ -10,7 +10,7 @@ class GlobalBadge extends StatelessWidget {
   final EdgeInsets padding;
   final bool showBadge;
 
-  const GlobalBadge({
+  const SkGlobalBadge({
     Key? key,
     required this.child,
     required this.value,

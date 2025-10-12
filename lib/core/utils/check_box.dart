@@ -147,7 +147,7 @@ class _SkGlobalCheckboxState extends State<SkGlobalCheckbox> {
 
 enum CheckboxStyle { material, rounded, circular, custom }
 
-class EnhancedGlobalCheckbox extends StatefulWidget {
+class SkEnhancedGlobalCheckbox extends StatefulWidget {
   final bool? value;
   final ValueChanged<bool?> onChanged;
   final String? label;
@@ -168,7 +168,7 @@ class EnhancedGlobalCheckbox extends StatefulWidget {
   final Duration animationDuration;
   final Curve animationCurve;
 
-  const EnhancedGlobalCheckbox({
+  const SkEnhancedGlobalCheckbox({
     Key? key,
     required this.value,
     required this.onChanged,
@@ -192,10 +192,11 @@ class EnhancedGlobalCheckbox extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<EnhancedGlobalCheckbox> createState() => _EnhancedGlobalCheckboxState();
+  State<SkEnhancedGlobalCheckbox> createState() =>
+      _SkEnhancedGlobalCheckboxState();
 }
 
-class _EnhancedGlobalCheckboxState extends State<EnhancedGlobalCheckbox>
+class _SkEnhancedGlobalCheckboxState extends State<SkEnhancedGlobalCheckbox>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _scaleAnimation;
@@ -215,7 +216,7 @@ class _EnhancedGlobalCheckboxState extends State<EnhancedGlobalCheckbox>
   }
 
   @override
-  void didUpdateWidget(covariant EnhancedGlobalCheckbox oldWidget) {
+  void didUpdateWidget(covariant SkEnhancedGlobalCheckbox oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.value != widget.value) {
       _currentValue = widget.value;
@@ -237,7 +238,6 @@ class _EnhancedGlobalCheckboxState extends State<EnhancedGlobalCheckbox>
       case CheckboxStyle.custom:
         return widget.borderRadius ?? BorderRadius.circular(4.0);
       case CheckboxStyle.material:
-      default:
         return BorderRadius.circular(2.0);
     }
   }

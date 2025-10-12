@@ -103,7 +103,7 @@ class _EnhancedSkProgressSliderState extends State<EnhancedSkProgressSlider>
   }
 
   Widget _buildLinearProgress(BuildContext context) {
-    final theme = Theme.of(context);
+    // final theme = Theme.of(context);
     final percentage = (widget.value / widget.max).clamp(0.0, 1.0);
     final animatedPercentage = _animation.value / widget.max;
 

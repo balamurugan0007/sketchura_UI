@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
-import 'package:sketchura_ui/core/utils/DismissableWidget/Dismisable.dart';
-import 'package:sketchura_ui/core/utils/bottomsheet/bottomsheet.dart';
-import 'package:sketchura_ui/core/utils/custom_button.dart';
-import 'package:sketchura_ui/core/utils/table/table.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,29 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final List<MyItem> items = [
-      MyItem('Apple'),
-      MyItem('Banana'),
-      MyItem('Cherry'),
-    ];
-
-    return Scaffold(
-      body: Column(
-        children: [
-          SkSimpleGlobalTable(
-            data: [
-              {'firstName': 'John', 'lastName': 'Doe', 'age': 30},
-              {'firstName': 'Jane', 'lastName': 'Smith', 'age': 25},
-            ],
-            columnSpacing: 32,
-            horizontalMargin: 20,
-            headerBackgroundColor: Colors.blue[50],
-            showBorder: false,
-            borderRadius: 12,
-          ),
+    return Scaffold(body: Column(children: [
+        
         ],
-      ),
-    );
+      ));
   }
 }
 
