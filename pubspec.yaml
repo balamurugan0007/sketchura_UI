@@ -3,8 +3,8 @@ name: sketchura_ui
 description: "Sketchura UI is a Flutter UI builder package that helps you reduce boilerplate 
   code and build modern interfaces faster. It provides simple, reusable, and 
   customizable components to speed up your development workflow" 
-version: 0.0.2
-homepage: https://github.com/balamurugan0007/sketchura_UI
+version: 0.0.3
+homepage: https://sketchura-ui.vercel.app/
 repository: https://github.com/balamurugan0007/sketchura_UI
 # publish_to: 'none'
 

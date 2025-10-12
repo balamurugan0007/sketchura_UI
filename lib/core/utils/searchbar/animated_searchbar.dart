@@ -49,7 +49,7 @@ class _SkSimpleAnimatedSearchBarState extends State<SkSimpleAnimatedSearchBar> {
         borderRadius: BorderRadius.circular(25),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black,
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -379,7 +379,7 @@ class _SkFloatingFilterSearchBarState extends State<SkFloatingFilterSearchBar> {
             boxShadow: _hasFocus
                 ? [
                     BoxShadow(
-                      color: Colors.blue.withOpacity(0.3),
+                      color: Colors.blue,
                       blurRadius: 20,
                       offset: Offset(0, 10),
                     ),

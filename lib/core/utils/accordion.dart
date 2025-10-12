@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sketchura_ui/constants/color_const.dart';
 
 class SkAccordion extends StatefulWidget {
   final String title;
@@ -93,7 +94,7 @@ class _SkAccordionState extends State<SkAccordion>
         boxShadow: [
           if (_isExpanded)
             BoxShadow(
-              color: Colors.black.withOpacity(0.05),
+              color: SkColors.darkLightest,
               blurRadius: 8,
               offset: const Offset(0, 3),
             ),

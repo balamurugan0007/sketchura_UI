@@ -64,7 +64,7 @@ class _SkSearchBarState extends State<SkSearchBar> {
 
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black,
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -228,7 +228,7 @@ class _SkSearchWithFilteredListState<T>
         borderRadius: BorderRadius.circular(widget.radius ?? 24),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black,
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),

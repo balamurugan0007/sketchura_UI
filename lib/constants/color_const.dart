@@ -28,9 +28,15 @@ class SkColors {
   static const Color errorLight = Color(0xFFFFE2E5);
 
   // Warning
-  static const Color warning = Color(0xFFE86339);
-  static const Color warningMedium = Color(0xFFFFB37C);
-  static const Color warningLight = Color(0xFFFFF4E4);
+  // static const Color warning = Color(0xFFE86339);
+  // static const Color warningMedium = Color(0xFFFFB37C);
+  // static const Color warningLight = Color(0xFFFFF4E4);
+
+  static const Color warning = Color(0xFFFF6F00); // Amber 900 - dark amber
+  static const Color warningMedium = Color(
+    0xFFFFB300,
+  ); // Amber 600 - medium amber
+  static const Color warningLight = Color(0xFFFFF8E1); // Amber 50 - light amber
 
   // Success
   static const Color success = Color(0xFF298267);

@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sketchura_ui/constants/color_const.dart';
+import 'package:sketchura_ui/core/utils/DismissableWidget/Dismisable.dart';
+import 'package:sketchura_ui/core/utils/bottomsheet/bottomsheet.dart';
+import 'package:sketchura_ui/core/utils/custom_button.dart';
+import 'package:sketchura_ui/core/utils/table/table.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,23 +35,39 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int selectedIndex = 0;
+
   TextEditingController usercontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+    final List<MyItem> items = [
+      MyItem('Apple'),
+      MyItem('Banana'),
+      MyItem('Cherry'),
+    ];
 
-        title: Text(widget.title),
+    return Scaffold(
+      body: Column(
+        children: [
+          SkSimpleGlobalTable(
+            data: [
+              {'firstName': 'John', 'lastName': 'Doe', 'age': 30},
+              {'firstName': 'Jane', 'lastName': 'Smith', 'age': 25},
+            ],
+            columnSpacing: 32,
+            horizontalMargin: 20,
+            headerBackgroundColor: Colors.blue[50],
+            showBorder: false,
+            borderRadius: 12,
+          ),
+        ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
-        ),
-      ),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+class MyItem {
+  final String name;
+  MyItem(this.name);
 }

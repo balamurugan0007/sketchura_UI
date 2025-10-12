@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sketchura_ui/constants/color_const.dart';
 
 class GlobalBadge extends StatelessWidget {
   final Widget child;
@@ -40,7 +41,7 @@ class GlobalBadge extends StatelessWidget {
               borderRadius: BorderRadius.circular(borderRadius),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.15),
+                  color: SkColors.darkLightest,
                   blurRadius: 4,
                   offset: const Offset(0, 2),
                 ),

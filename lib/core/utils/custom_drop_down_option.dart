@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SkDropDownMenu extends StatefulWidget {
+class SkDropDownListMenu extends StatefulWidget {
   final ValueChanged<String> onChanged;
   final double? w;
   final double? h;
@@ -9,7 +9,7 @@ class SkDropDownMenu extends StatefulWidget {
   final Widget? child;
   final String? hintText;
 
-  const SkDropDownMenu({
+  const SkDropDownListMenu({
     super.key,
     required this.onChanged,
     this.h,
@@ -21,10 +21,10 @@ class SkDropDownMenu extends StatefulWidget {
   });
 
   @override
-  State<SkDropDownMenu> createState() => _SkDropDownMenuState();
+  State<SkDropDownListMenu> createState() => _SkDropDownListMenuState();
 }
 
-class _SkDropDownMenuState extends State<SkDropDownMenu> {
+class _SkDropDownListMenuState extends State<SkDropDownListMenu> {
   String? selectedValue;
 
   @override
@@ -99,6 +99,123 @@ class _SkDropDownMenuState extends State<SkDropDownMenu> {
   }
 }
 
+//dropdown with customChild get widget next
 
+class SkDropDownList extends StatefulWidget {
+  final String label;
+  final IconData? icon;
+  final List<String> items;
+  final ValueChanged<String> onSelected;
+  final bool initiallyExpanded;
 
-//dropdown with customChild get widget next 
+  const SkDropDownList({
+    Key? key,
+    required this.label,
+    this.icon,
+    required this.items,
+    required this.onSelected,
+    this.initiallyExpanded = false,
+  }) : super(key: key);
+
+  @override
+  State<SkDropDownList> createState() => _SkDropDownListState();
+}
+
+class _SkDropDownListState extends State<SkDropDownList>
+    with SingleTickerProviderStateMixin {
+  late bool _expanded;
+  late final AnimationController _controller;
+  late final Animation<double> _rotateAnim;
+
+  @override
+  void initState() {
+    super.initState();
+    _expanded = widget.initiallyExpanded;
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 180),
+    );
+    _rotateAnim = Tween<double>(begin: 0.0, end: 0.5).animate(_controller);
+    if (_expanded) _controller.value = 1.0;
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void _toggle() {
+    setState(() {
+      _expanded = !_expanded;
+      if (_expanded) {
+        _controller.forward();
+      } else {
+        _controller.reverse();
+      }
+    });
+  }
+
+  Widget _buildItem(String label) {
+    return InkWell(
+      onTap: () {
+        widget.onSelected(label);
+        // close after selection
+        setState(() {
+          _expanded = false;
+          _controller.reverse();
+        });
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(label, style: Theme.of(context).textTheme.bodySmall),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        InkWell(
+          borderRadius: BorderRadius.circular(8),
+          onTap: _toggle,
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+            child: Row(
+              children: [
+                if (widget.icon != null)
+                  Icon(widget.icon, size: 20, color: cs.onSurface),
+                if (widget.icon != null) const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    widget.label,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                ),
+                RotationTransition(
+                  turns: _rotateAnim,
+                  child: Icon(Icons.expand_more, size: 20, color: cs.onSurface),
+                ),
+              ],
+            ),
+          ),
+        ),
+        AnimatedCrossFade(
+          firstChild: const SizedBox.shrink(),
+          secondChild: Column(children: widget.items.map(_buildItem).toList()),
+          crossFadeState: _expanded
+              ? CrossFadeState.showSecond
+              : CrossFadeState.showFirst,
+          duration: const Duration(milliseconds: 160),
+        ),
+      ],
+    );
+  }
+}
