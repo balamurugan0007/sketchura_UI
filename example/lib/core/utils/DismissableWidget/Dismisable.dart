@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
+import '../../../constants/color_const.dart';
 
+/// A widget that provides swipe-to-dismiss functionality for list items.
+///
+/// Example usage:
+/// ```dart
+/// SkDismissibleList(
+///   items: ['Item 1', 'Item 2'],
+///   onDismissed: (index) {
+///     print('Dismissed item $index');
+///   },
+/// )
+/// ```
 class SkDismissibleList<T> extends StatefulWidget {
   final List<T> items;
   final Widget Function(BuildContext context, T item) itemBuilder;

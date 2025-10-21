@@ -1,6 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
+import '../../constants/color_const.dart';
 
+///
+///
+/// Example usage:
+/// ```dart
+// Filled Button (Primary actions)
+// SkFilledButton(
+//   label: "Submit",
+
+//   onTap: (){},
+// )
+
+// // Outlined Button (Secondary actions)
+// SkOutlinedButton(
+//   label: "Cancel",
+//   borderColor: Skcolors.error,
+//   onTap: () => (),
+// )
+/// ```
+///
 class SkFilledButton extends StatelessWidget {
   final String label;
   final Color? backgroundColor;

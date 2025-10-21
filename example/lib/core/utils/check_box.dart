@@ -1,6 +1,28 @@
 // components/checkbox.dart
 import 'package:flutter/material.dart';
 
+///
+///
+/// Example usage:
+/// ```dart
+/// // Basic usage
+// Basic checkbox
+// SkGlobalCheckbox(
+//   value: isChecked,
+//   onChanged: (value) => setState(() => isChecked = value ?? false),
+//   label: "Basic Checkbox",
+// )
+
+// // Enhanced checkbox with animations
+// SkEnhancedGlobalCheckbox(
+//   value: isChecked,
+//   onChanged: (value) => setState(() => isChecked = value ?? false),
+//   label: "Enhanced Checkbox",
+//   style: CheckboxStyle.rounded,
+//   showRippleEffect: true,
+// )
+
+/// ```
 class SkGlobalCheckbox extends StatefulWidget {
   final bool value;
   final ValueChanged<bool?> onChanged;

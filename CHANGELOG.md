@@ -1,3 +1,13 @@
+## 0.0.4
+Added
+    - BottomNavigationBar component for consistent BottomNavigations.
+
+    - Charts has Added to Display Reports
+
+    -
+
+
+
 ## 0.0.3
 Added
     - AppBar component for consistent app headers.

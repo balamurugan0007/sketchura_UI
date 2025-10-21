@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
-import 'package:sketchura_ui/core/utils/custom_button.dart';
+import '../../constants/color_const.dart';
+import 'custom_button.dart';
 
 class SkSnackbar {
   // Success, Error, Info, Warning colors

@@ -1,6 +1,6 @@
 // utils/progress_utils.dart
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/core/utils/progress_slider/progress_slider.dart';
+import 'progress_slider.dart';
 
 class SkProgressUtils {
   static Widget buildLinearProgress({

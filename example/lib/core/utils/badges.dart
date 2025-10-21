@@ -1,6 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
+import '../../constants/color_const.dart';
 
+///
+///
+/// Example usage:
+/// ```dart
+// Basic badge on an icon
+// SkGlobalBadge(
+//   value: "5",
+//   child: Icon(Icons.notifications, size: 30),
+// )
+
+// // Badge on custom widget
+// SkGlobalBadge(
+//   value: "New",
+//   child: Container(
+//     width: 50,
+//     height: 50,
+//     decoration: BoxDecoration(
+//       color: Colors.blue,
+//       borderRadius: BorderRadius.circular(8),
+//     ),
+//   ),
+// )
+// )
+/// )
+/// ```
 class SkGlobalBadge extends StatelessWidget {
   final Widget child;
   final String value;

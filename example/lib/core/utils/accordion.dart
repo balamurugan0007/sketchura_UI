@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
+import '../../constants/color_const.dart';
 
+///
+///
+/// Example usage:
+/// ```dart
+/// // Basic usage
+// SkAccordion(
+//   title: "Frequently Asked Questions",
+//   content: Text("This is the expanded content area..."),
+// )
+/// )
+/// ```
 class SkAccordion extends StatefulWidget {
   final String title;
   final Widget content;

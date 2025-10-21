@@ -1,5 +1,27 @@
 import 'package:flutter/material.dart';
 
+///
+///
+/// Example usage:
+/// ```dart
+// Basic breadcrumbs
+// SkBreadcrumbs(
+//   items: ['Home', 'Products', 'Electronics', 'Smartphones'],
+//   onTap: (index) {
+//     print('Clicked item at index: $index');
+//   },
+// )
+
+// // Custom styled breadcrumbs
+// SkBreadcrumbs(
+//   items: ['Home', 'Documents', 'Projects'],
+//   onTap: (index) => navigateToLevel(index),
+//   textStyle: TextStyle(color: Colors.blue),
+//   activeStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+//   separator: Icon(Icons.arrow_forward_ios, size: 12),
+//   isunderlineRequired: true,
+// )
+/// ```
 class SkBreadcrumbs extends StatelessWidget {
   final List<String> items;
   final ValueChanged<int>? onTap; // to know which item clicked

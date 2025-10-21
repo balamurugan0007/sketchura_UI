@@ -1,16 +1,32 @@
-# sketchura
+# 🎨 Sketchura UI
 
-A new Flutter project.
+### A modern Flutter UI toolkit for faster and cleaner app development
 
-## Getting Started
+![Preview](assets/cover.jpg)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+`sketchura_ui` is a Flutter UI builder package that helps developers **reduce boilerplate code** and **build beautiful interfaces quickly**.  
+It provides **simple, reusable, and customizable UI components** designed to make your development workflow smoother and more efficient.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
+Documentation Website URL
+[Link Text](https://sketchura-ui.vercel.app/)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## 🚀 Features
+
+- 🧩 Reusable and customizable widgets  
+- 🎨 Modern UI design with flexible styling  
+- ⚡ Easy integration with existing Flutter apps  
+- 🛠️ Reduces boilerplate and simplifies UI building  
+- 💻 Developer-friendly APIs with clean structure  
+
+---
+
+## 📦 Installation
+
+Add this line to your **pubspec.yaml**:
+
+```yaml
+dependencies:
+  sketchura_ui: ^0.0.3

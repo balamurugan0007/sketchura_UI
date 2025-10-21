@@ -1,9 +1,8 @@
 name: sketchura_ui
 
-description: "Sketchura UI is a Flutter UI builder package that helps you reduce boilerplate 
-  code and build modern interfaces faster. It provides simple, reusable, and 
-  customizable components to speed up your development workflow" 
-version: 0.0.3
+description: Build modern Flutter UIs faster with reusable, customizable components and minimal boilerplate.
+
+version: 0.0.4
 homepage: https://sketchura-ui.vercel.app/
 repository: https://github.com/balamurugan0007/sketchura_UI
 # publish_to: 'none'
@@ -54,6 +53,11 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+
+linter:
+  rules:
+    public_member_api_docs: true
+
 flutter:
 
   # The following line ensures that the Material Icons font is

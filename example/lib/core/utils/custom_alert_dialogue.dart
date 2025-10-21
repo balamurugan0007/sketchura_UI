@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/constants/color_const.dart';
+import '../../constants/color_const.dart';
 
 /// A global, reusable dialog container with customization options.
 // utils/dialog_utils.dart
