@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../constants/color_const.dart';
+
 /// A single navigation item used by [SkBottomNavigationBar].
 class SkBottomNavItem {
   final Widget icon;
@@ -107,9 +109,7 @@ class _SkBottomNavigationBarState extends State<SkBottomNavigationBar> {
                     vertical: 6,
                     horizontal: 8,
                   ),
-                  color: item.backgroundColor?.withOpacity(
-                    selected ? 0.08 : 0.0,
-                  ),
+                  color: selected ? SkColors.lightMedium : SkColors.lightlight,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

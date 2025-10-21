@@ -40,7 +40,7 @@ class SkSimpleGlobalTable extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: DataTable(
           headingRowColor: MaterialStateProperty.all(
-            headerBackgroundColor ?? colorScheme.primary.withOpacity(0.1),
+            headerBackgroundColor ?? colorScheme.primary,
           ),
           dataRowColor: _getRowColor(colorScheme),
           decoration: BoxDecoration(
@@ -74,7 +74,7 @@ class SkSimpleGlobalTable extends StatelessWidget {
     return MaterialStateProperty.resolveWith((states) {
       if (rowBackgroundColor != null) return rowBackgroundColor;
       return states.contains(MaterialState.selected)
-          ? colorScheme.primary.withOpacity(0.2)
+          ? colorScheme.primary
           : null;
     });
   }
