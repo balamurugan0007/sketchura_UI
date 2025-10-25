@@ -2,7 +2,7 @@ name: sketchura_ui
 
 description: Build modern Flutter UIs faster with reusable, customizable components and minimal boilerplate.
 
-version: 0.0.4
+version: 0.0.5
 homepage: https://sketchura-ui.vercel.app/
 repository: https://github.com/balamurugan0007/sketchura_UI
 # publish_to: 'none'

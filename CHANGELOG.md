@@ -1,3 +1,10 @@
+## 0.0.5
+Added
+    - file structure has updated
+    - Aleart Dialogue issuses updated
+
+
+
 ## 0.0.4
 Added
     - BottomNavigationBar component for consistent BottomNavigations.

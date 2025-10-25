@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../constants/app_sizes.dart';
-import '../../constants/color_const.dart';
+import '../../../constants/app_sizes.dart';
+import '../../../constants/color_const.dart';
 
 /// A reusable input component for forms and general text input.
 ///

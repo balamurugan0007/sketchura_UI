@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'constants/color_const.dart';
-import 'core/utils/accordion.dart';
-import 'core/utils/check_box.dart';
-import 'core/utils/custom_button.dart';
-import 'core/utils/inputbar.dart';
-import 'core/utils/snackbar.dart';
-import 'core/utils/toast_message.dart';
+import 'package:sketchura_ui/constants/app_sizes.dart';
+import 'package:sketchura_ui/constants/color_const.dart';
+import 'package:sketchura_ui/core/utils/sk_accordian/sk_accordion.dart';
+import 'package:sketchura_ui/core/utils/sk_button/sk_button.dart';
+import 'package:sketchura_ui/core/utils/sk_input/sk_input.dart';
+import 'package:sketchura_ui/core/utils/sk_snackbar/sk_snackbar.dart';
+import 'package:sketchura_ui/core/utils/sk_toast/toast_message.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //  Buttons
+              // Buttons
               Row(
                 children: [
                   SkFilledButton(
@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 label: "SnackBar",
                 onTap: () {
                   SkSnackbar.show(
-                    context,
+                    context: context,
                     message: "Operation completed successfully!",
                     backgroundColor: SkColors.primary,
                   );
@@ -166,6 +166,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
               ),
+
+              Sksize.gapH12,
             ],
           ),
         ),

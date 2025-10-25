@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../constants/color_const.dart';
-import 'custom_button.dart';
+import '../../../constants/color_const.dart';
+import '../sk_button/sk_button.dart';
 
 class SkSnackbar {
   // Success, Error, Info, Warning colors
@@ -10,8 +10,8 @@ class SkSnackbar {
   static const Color warningColor = SkColors.warning;
 
   /// Show a snackbar
-  static void show(
-    BuildContext context, {
+  static void show({
+    required BuildContext context,
     required String message,
     Color backgroundColor = SkColors.primary,
     Duration duration = const Duration(seconds: 3),
@@ -72,7 +72,7 @@ class SkSnackbar {
     VoidCallback? onTap,
   }) {
     show(
-      context,
+      context: context,
       message: message,
       backgroundColor: successColor,
       onTap: onTap,
@@ -80,14 +80,14 @@ class SkSnackbar {
   }
 
   static void error(BuildContext context, String message) {
-    show(context, message: message, backgroundColor: errorColor);
+    show(context: context, message: message, backgroundColor: errorColor);
   }
 
   static void info(BuildContext context, String message) {
-    show(context, message: message, backgroundColor: infoColor);
+    show(context: context, message: message, backgroundColor: infoColor);
   }
 
   static void warning(BuildContext context, String message) {
-    show(context, message: message, backgroundColor: warningColor);
+    show(context: context, message: message, backgroundColor: warningColor);
   }
 }

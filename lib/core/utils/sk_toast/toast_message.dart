@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constants/color_const.dart';
+import '../../../constants/color_const.dart';
 
 class SkToast {
   static const String successToast = 'success';

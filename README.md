@@ -29,7 +29,7 @@ Add this line to your **pubspec.yaml**:
 
 ```yaml
 dependencies:
-  sketchura_ui: ^0.0.4
+  sketchura_ui: ^0.0.5
 ```
 
 
@@ -165,7 +165,7 @@ A **modern, reusable, and customizable input field** for Flutter — part of the
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/components/input/sk_input.dart';
+import "package:sketchura_ui/core/utils/sk_input/sk_input.dart";
 
 class InputExample extends StatelessWidget {
   final TextEditingController controller = TextEditingController();
@@ -219,7 +219,7 @@ A **customizable accordion/expandable widget** for Flutter — part of the **Ske
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/components/accordion/sk_accordion.dart';
+import "package:sketchura_ui/core/utils/sk_accordian/sk_accordion.dart";
 
 class AccordionExample extends StatelessWidget {
   @override
@@ -262,7 +262,7 @@ A **flexible breadcrumb navigation widget** for Flutter — part of the **Sketch
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/components/breadcrumbs/sk_breadcrumbs.dart';
+import "package:sketchura_ui/core/utils/sk_breadcrums/sk_breadcrums.dart";
 
 class BreadcrumbExample extends StatelessWidget {
   @override
@@ -304,7 +304,7 @@ A **flexible badge widget** for Flutter — part of the **Sketchura UI Library**
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/components/badge/sk_global_badge.dart';
+import "package:sketchura_ui/core/utils/sk_badge/sk_badges.dart";
 
 class BadgeExample extends StatelessWidget {
   @override
@@ -570,7 +570,7 @@ A **flexible and customizable navbar dropdown** for Flutter — part of the **Sk
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:sketchura_ui/components/navbar/sk_navbar_dropdown.dart';
+import "package:sketchura_ui/core/utils/sk_navbar_dropdown_list/sk_Navbar_dropdown.dart";
 
 class NavbarExample extends StatelessWidget {
   @override

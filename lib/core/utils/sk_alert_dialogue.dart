@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sketchura_ui/core/utils/sk_button/sk_button.dart';
 import '../../constants/color_const.dart';
 
 /// A global, reusable dialog container with customization options.
@@ -94,8 +95,8 @@ class SkDialog extends StatelessWidget {
     final hasIcon = type != DialogType.custom || icon != null;
 
     final dialogContent = Container(
-      width: width,
-      height: height,
+      width: width ?? 250,
+      height: height ?? 300,
       padding: padding ?? const EdgeInsets.all(24),
       decoration: BoxDecoration(
         color: effectiveBackgroundColor,
@@ -156,11 +157,11 @@ class SkDialog extends StatelessWidget {
           child: TweenAnimationBuilder<double>(
             duration: animationDuration,
             curve: animationCurve,
-            tween: Tween(begin: 0.0, end: 1.0),
+            tween: Tween(begin: 0.0, end: 0.6),
             builder: (context, value, child) {
               return Transform.scale(
                 scale: Curves.easeInOutBack.transform(value),
-                child: Opacity(opacity: value, child: child),
+                child: Opacity(opacity: .8, child: child),
               );
             },
             child: content,
@@ -176,12 +177,11 @@ class SkDialog extends StatelessWidget {
       child: Container(
         width: 32,
         height: 32,
-        decoration: BoxDecoration(color: Colors.black, shape: BoxShape.circle),
-        child: Icon(
-          Icons.close,
-          size: 18,
-          color: Theme.of(context).textTheme.bodyLarge?.color,
+        decoration: BoxDecoration(
+          color: SkColors.darkDarkest,
+          shape: BoxShape.circle,
         ),
+        child: Icon(Icons.close, size: 18, color: SkColors.lightLightest),
       ),
     );
   }
@@ -196,6 +196,8 @@ class SkDialogUtils {
     DialogType type = DialogType.custom,
     DialogSize size = DialogSize.medium,
     bool showCloseButton = true,
+    Duration? animationDuration,
+    Curve? animationCurve,
   }) {
     return showDialog<T>(
       context: context,
@@ -208,6 +210,8 @@ class SkDialogUtils {
           showCloseButton: showCloseButton,
           width: _getDialogWidth(size),
           child: dialogContent,
+          animationCurve: animationCurve ?? Curves.ease,
+          animationDuration: animationDuration ?? Duration(seconds: 1),
         );
       },
     );
@@ -246,6 +250,8 @@ class SkDialogUtils {
     Color? confirmButtonColor,
     Color? cancelButtonColor,
     bool destructiveAction = false,
+    Duration? animationDuration,
+    Curve? animationCurve,
   }) {
     return showSkDialog(
       context: context,
@@ -253,6 +259,8 @@ class SkDialogUtils {
       size: size,
       barrierDismissible: barrierDismissible,
       showCloseButton: showCloseButton,
+      animationCurve: animationCurve,
+      animationDuration: animationDuration,
       builder: (context) {
         final theme = Theme.of(context);
         final typeColor = _getTypeColor(type, theme);
@@ -416,19 +424,30 @@ class SkDialogUtils {
             ),
           ),
         const SizedBox(width: 12),
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: destructiveAction
-                ? Theme.of(context).colorScheme.error
-                : confirmButtonColor,
-            foregroundColor: Colors.white,
-          ),
-          onPressed: () {
+        SkFilledButton(
+          label: "Confirm",
+          onTap: () {
             Navigator.of(context).pop();
             onConfirm?.call();
           },
-          child: Text(confirmText),
+          borderRadius: 32,
+          backgroundColor: destructiveAction
+              ? Theme.of(context).colorScheme.error
+              : confirmButtonColor ?? SkColors.primaryDark,
         ),
+        // ElevatedButton(
+        //   style: ElevatedButton.styleFrom(
+        //     backgroundColor: destructiveAction
+        //         ? Theme.of(context).colorScheme.error
+        //         : confirmButtonColor,
+        //     foregroundColor: Colors.white,
+        //   ),
+        //   onPressed: () {
+        //     Navigator.of(context).pop();
+        //     onConfirm?.call();
+        //   },
+        //   child: Text(confirmText),
+        // ),
       ],
     );
   }
