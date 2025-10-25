@@ -221,17 +221,17 @@ class _SkTabsState extends State<SkTabs> with SingleTickerProviderStateMixin {
 
     switch (widget.style) {
       case SkTabStyle.standard:
-        return colorScheme.onSurface.withOpacity(0.6);
+        return colorScheme.onSurface;
       case SkTabStyle.light:
-        return colorScheme.onSurface.withOpacity(0.5);
+        return colorScheme.onSurface;
       case SkTabStyle.dark:
         return Colors.white70;
       case SkTabStyle.pill:
-        return colorScheme.onSurface.withOpacity(0.6);
+        return colorScheme.onSurface;
       case SkTabStyle.outlined:
-        return colorScheme.onSurface.withOpacity(0.6);
+        return colorScheme.onSurface;
       case SkTabStyle.floating:
-        return colorScheme.onSurface.withOpacity(0.6);
+        return colorScheme.onSurface;
     }
   }
 
@@ -272,7 +272,7 @@ class _SkTabsState extends State<SkTabs> with SingleTickerProviderStateMixin {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),
           ),
-          color: colorScheme.primary.withOpacity(0.1),
+          color: colorScheme.primary,
         );
       case SkTabStyle.outlined:
         return UnderlineTabIndicator(
@@ -334,7 +334,7 @@ class _SkTabsState extends State<SkTabs> with SingleTickerProviderStateMixin {
       return BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: widget.borderColor ?? colorScheme.outline.withOpacity(0.2),
+            color: widget.borderColor ?? colorScheme.outline,
             width: 1,
           ),
         ),

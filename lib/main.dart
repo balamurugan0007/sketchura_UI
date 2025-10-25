@@ -5,7 +5,6 @@ import 'constants/color_const.dart';
 import 'core/utils/sk_accordian/sk_accordion.dart';
 import 'core/utils/sk_button/sk_button.dart';
 import 'core/utils/sk_input/sk_input.dart';
-import "package:sketchura_ui/core/utils/sk_alert_dialogue.dart";
 
 void main() {
   runApp(const MyApp());
