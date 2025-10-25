@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sketchura_ui/constants/color_const.dart';
 
 class SkTabs extends StatefulWidget {
   final List<String> tabs;
@@ -344,7 +345,7 @@ class _SkTabsState extends State<SkTabs> with SingleTickerProviderStateMixin {
       case SkTabStyle.outlined:
         return BoxDecoration(
           border: Border.all(
-            color: widget.borderColor ?? colorScheme.outline.withOpacity(0.3),
+            color: widget.borderColor ?? SkColors.darkLightest,
           ),
           borderRadius: BorderRadius.circular(widget.borderRadius),
         );
