@@ -57,9 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   SkFilledButton(
                     label: 'Primary Action',
-                    onTap: () {
-                      print('Button clicked!');
-                    },
+                    onTap: () {},
                     backgroundColor: SkColors.primary,
                   ),
 
@@ -67,7 +65,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   SkOutlinedButton(
                     label: 'Outline',
                     onTap: () async {
-                      print('Outlined button clicked!');
                       await SkDialogUtils.showSkConfirmationDialog(
                         context: context,
                         title: "Error Accour",
