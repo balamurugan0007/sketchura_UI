@@ -30,7 +30,7 @@ Add this line to your **pubspec.yaml**:
 ```yaml
 dependencies:
   sketchura_ui: ^0.0.4
-
+```
 
 # 🚀 Sketchura Buttons
 
