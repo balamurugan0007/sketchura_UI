@@ -32,6 +32,68 @@ dependencies:
   sketchura_ui: ^0.0.4
 ```
 
+
+# 🌟 SkResponsive
+
+A **responsive utility class** for Flutter, inspired by Tailwind CSS breakpoints, providing easy identification of screen sizes, device types, and adaptive sizing for padding, fonts, gaps, icons, and containers.Check More About 
+[SkResponsive](https://sketchura-ui.vercel.app/#/ResposiveUtils)
+
+---
+
+## 🔹 Example Usage
+
+```dart
+// Identify screen size
+final sizeName = SkResponsive.getScreenSize(context); // 'sm', 'md', etc.
+
+// Check device type
+bool isMobile = SkResponsive.isMobile(context);
+bool isTablet = SkResponsive.isTablet(context);
+bool isDesktop = SkResponsive.isDesktop(context);
+
+// Get adaptive double value
+double fontSize = SkResponsive.valueDouble(
+  context,
+  mobile: 14.0,
+  tablet: 16.0,
+  desktop: 18.0,
+);
+
+// Get adaptive int value
+int columns = SkResponsive.valueInt(
+  context,
+  mobile: 2,
+  tablet: 3,
+  desktop: 4,
+);
+
+// Generic responsive value
+T value = SkResponsive.value<String>(
+  context,
+  mobile: 'small',
+  tablet: 'medium',
+  desktop: 'large',
+);
+
+// Adaptive padding and gaps
+EdgeInsets padding = SkResponsive.identifyPadding(context);
+EdgeInsets hPadding = SkResponsive.identifyHorizontalPadding(context);
+SizedBox gap = SkResponsive.identifyGap(context);
+
+// Adaptive icon size
+double iconSize = SkResponsive.identifyIconSize(context);
+
+// Adaptive container width
+double containerWidth = SkResponsive.identifyContainerWidth(context);
+
+// Check breakpoints
+bool largerThanMd = SkResponsive.isLargerThan(context, 'md');
+bool smallerThanLg = SkResponsive.isSmallerThan(context, 'lg');
+
+// Get scale factor for responsive sizing
+double scale = SkResponsive.getScaleFactor(context);
+```
+
 # 🚀 Sketchura Buttons
 
 Beautiful, customizable, and developer-friendly button components built for **Flutter** — designed to speed up your UI development with clean design, modern style, and flexible customization.
@@ -48,6 +110,9 @@ The `Sketchura Buttons` package provides four elegant button components:
 | **`SkOutlinedButton`** | For secondary actions — outlined border style |
 | **`SkTextButton`** | For minimal inline or tertiary actions |
 | **`SkIconButton`** | For icon + text combinations — perfect for CTAs and menus |
+
+Check More About SkButtons
+[SkButtons](https://sketchura-ui.vercel.app/#/button)
 
 All buttons are built with **Material + InkWell** interactions, ensuring native Flutter ripple effects and consistent behavior across devices.
 
@@ -73,14 +138,16 @@ SkButton(
   },
 
 )
-
+```
 
 # 🧩 SkInput
 
 A **modern, reusable, and customizable input field** for Flutter — part of the **Sketchura UI Library**.  
-`SkInput` helps you build beautiful, consistent form fields faster with support for icons, validation, titles, and outlined styles.
+`SkInput` helps you build beautiful, consistent form fields faster with support for icons, validation, titles, and outlined styles. Check More About SkInput Widget
+[SkInput](https://sketchura-ui.vercel.app/#/input)
 
 ---
+
 
 ## ✨ Features
 
@@ -92,6 +159,7 @@ A **modern, reusable, and customizable input field** for Flutter — part of the
 - ⚙️ Fully **customizable**: colors, borders, radius, text styles, and size  
 
 ---
+
 
 ## 🚀 Example Usage
 
@@ -127,12 +195,13 @@ class InputExample extends StatelessWidget {
     );
   }
 }
-
+```
 
 # 🧩 SkAccordion
 
 A **customizable accordion/expandable widget** for Flutter — part of the **Sketchura UI Library**.  
-`SkAccordion` allows you to show collapsible content sections with smooth animations and flexible styling.
+`SkAccordion` allows you to show collapsible content sections with smooth animations and flexible styling.Check More About accordian Widget
+[SkAccordian](https://sketchura-ui.vercel.app/#/accordian)
 
 ---
 
@@ -168,11 +237,13 @@ class AccordionExample extends StatelessWidget {
     );
   }
 }
+```
 
 # 🧩 SkBreadcrumbs
 
 A **flexible breadcrumb navigation widget** for Flutter — part of the **Sketchura UI Library**.  
-`SkBreadcrumbs` allows you to display hierarchical navigation paths, with customizable styles, separators, and tap handling.
+`SkBreadcrumbs` allows you to display hierarchical navigation paths, with customizable styles, separators, and tap handling.Check More About 
+[SkBreadcrumbs](https://sketchura-ui.vercel.app/#/breadcrumsPage)
 
 ---
 
@@ -209,11 +280,13 @@ class BreadcrumbExample extends StatelessWidget {
   }
 }
 
+```
 
 # 🧩 SkGlobalBadge
 
 A **flexible badge widget** for Flutter — part of the **Sketchura UI Library**.  
-`SkGlobalBadge` allows you to display notification badges or labels on top of any widget, such as icons, buttons, or custom containers.
+`SkGlobalBadge` allows you to display notification badges or labels on top of any widget, such as icons, buttons, or custom containers.Check More About 
+[SkGlobalBadge](https://sketchura-ui.vercel.app/#/badges)
 
 ---
 
@@ -247,11 +320,14 @@ class BadgeExample extends StatelessWidget {
   }
 }
 
+```
+
 # 📝 SkBottomSheet
 
 **SkBottomSheet** is a **reusable custom bottom sheet** widget for Flutter.  
 It provides a clean, modern design with customizable **height**, **background color**, and **border radius**.  
-You can also show it easily using a static `show` method.
+You can also show it easily using a static `show` method.Check More About 
+[SkBottomSheet](https://sketchura-ui.vercel.app/#/bottomsheet)
 
 ---
 
@@ -281,11 +357,13 @@ SkBottomSheet.show(
   ),
 );
 
+```
 
 # 🔔 SkToast
 
 **SkToast** is a lightweight and fully customizable **Flutter toast/snackbar system** built using `Overlay`.  
-It supports **success, warning, error, and info** types and can display **titles, messages, and close buttons**.  
+It supports **success, warning, error, and info** types and can display **titles, messages, and close buttons**.  Check More About 
+[SkToast](https://sketchura-ui.vercel.app/#/skToast)
 
 ---
 
@@ -312,11 +390,13 @@ SkToast.show(
   showCloseButton: true,
   duration: Duration(seconds: 4),
 );
+```
 
 # 🔔 SkSnackbar
 
 A **customizable snackbar utility** for Flutter, part of the Sketchura UI library.  
-Supports **floating or fixed snackbars**, action buttons, and multiple predefined types like success, error, info, and warning.
+Supports **floating or fixed snackbars**, action buttons, and multiple predefined types like success, error, info, and warning.Check More About 
+[SkSnackbar](https://sketchura-ui.vercel.app/#/snackbar)
 
 ---
 
@@ -347,11 +427,12 @@ SkSnackbar.info(context, "Here is some info");
 // Warning snackbar
 SkSnackbar.warning(context, "Be careful!");
 
-
+```
 # ⬇️ SkDropDown Widgets
 
 **SkDropDownListMenu** and **SkDropDownList** are **customizable dropdown menu widgets** for Flutter, providing **simple selection** and **animated expansion**.  
-These widgets allow both basic selection from a list of strings and custom child widgets.
+These widgets allow both basic selection from a list of strings and custom child widgets.Check More About 
+[SkDropDown](https://sketchura-ui.vercel.app/#/dropdownmenu)
 
 ---
 
@@ -373,12 +454,13 @@ SkDropDownListMenu(
   child: Icon(Icons.menu), // optional custom leading widget
 ),
 
-
+```
 
 # 🗑️ SkDismissibleList
 
 A **reusable swipe-to-dismiss list widget** for Flutter.  
-Allows users to **swipe left or right to remove items** from a list with customizable background and icon.
+Allows users to **swipe left or right to remove items** from a list with customizable background and icon.Check More About 
+[SkDismissibleList](https://sketchura-ui.vercel.app/#/dissmissable)
 
 ---
 
@@ -399,7 +481,7 @@ SkDismissibleList<String>(
   deleteIcon: Icons.delete_forever,
   deleteIconColor: Colors.white,
 ),
-
+```
 
 # 🔍 SkSearchBar & SkSearchWithFilteredList
 
@@ -430,7 +512,7 @@ SkSearchBar(
   backgroundColor: Colors.grey[200],
   radious: 24,
 )
-
+```
 
 # 🔎 SkAnimated Search Bars
 
@@ -462,7 +544,7 @@ SkSimpleAnimatedSearchBar(
 )
 
 
-
+```
 
 
 # 🧩 SkNavbarDropdown
@@ -508,7 +590,7 @@ class NavbarExample extends StatelessWidget {
   }
 }
 
-
+```
 # 📊 SkChart
 
 **SkChart** is a **custom, reusable Flutter chart widget** built with `CustomPaint`.  
@@ -539,7 +621,7 @@ SkChart(
   height: 200,
   backgroundColor: Colors.white,
 )
-
+```
 
 # 🛎 SkBottomNavigationBar
 
@@ -579,7 +661,7 @@ SkBottomNavigationBar(
   selectedItemColor: Colors.blue,
   unselectedItemColor: Colors.grey,
 );
-
+```
 
 # 🌟 SkAppBar
 
@@ -633,7 +715,7 @@ SkAppBar(
   style: SkAppBarStyle.large,
 )
 
-
+```
 
 # 🌟 SkTabs
 
@@ -684,3 +766,4 @@ SkTabVariations.floating(
   tabViews: [View1(), View2()],
   context: context,
 )
+```
